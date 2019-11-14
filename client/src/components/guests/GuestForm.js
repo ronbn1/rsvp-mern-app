@@ -2,9 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import GuestContext from "../../context/guestContext/guestContext";
 
 const GuestForm = () => {
-  const { addGuest, edit, clearEdit, updateGuest } = useContext(
-    GuestContext
-  );
+  const { addGuest, edit, clearEdit, updateGuest } = useContext(GuestContext);
   useEffect(() => {
     if (edit !== null) {
       setGuest(edit);
@@ -47,7 +45,7 @@ const GuestForm = () => {
   };
   return (
     <div className="invite-section">
-      <h1>{edit===null?'Invite Someone':'Edit Guest'}</h1>
+      <h1>{edit === null ? "Please Invite Someone" : "Edit Guest"}</h1>
       <form onSubmit={onsubmit}>
         <input
           className="nameInput"
@@ -89,7 +87,7 @@ const GuestForm = () => {
             <span className="checkmark"></span>
           </label>
           <label className="container">
-          Vegetarian
+            Vegetarian
             <input
               type="radio"
               name="dietary"
@@ -100,8 +98,19 @@ const GuestForm = () => {
             <span className="checkmark"></span>
           </label>
         </div>
-        <input type="submit" value={edit===null?"Add Guest":'Update Guest'} className="btn" />
-        {edit !== null? <input value="Cancel" type="button" className="btn clear" onClick={clearEdit}></input>:null}
+        <input
+          type="submit"
+          value={edit === null ? "Add Guest" : "Update Guest"}
+          className="btn"
+        />
+        {edit !== null ? (
+          <input
+            value="Cancel"
+            type="button"
+            className="btn clear"
+            onClick={clearEdit}
+          ></input>
+        ) : null}
       </form>
     </div>
   );
