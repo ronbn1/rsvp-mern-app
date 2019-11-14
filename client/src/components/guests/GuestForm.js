@@ -45,7 +45,7 @@ const GuestForm = () => {
   };
   return (
     <div className="invite-section">
-      <h1>{edit === null ? "Please Invite Someone" : "Edit Guest"}</h1>
+      <h1>{edit === null ? "Please, Invite Someone" : "Edit Guest"}</h1>
       <form onSubmit={onsubmit}>
         <input
           className="nameInput"
