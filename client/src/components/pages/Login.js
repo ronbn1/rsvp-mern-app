@@ -44,7 +44,7 @@ const Login = props => {
           value={password}
           onChange={handleChange}
         />
-        <input type="submit" value="sign ip" className="btn" />
+        <input type="submit" value="sign in" className="btn" />
       </form>
       <div className="question">
         {errors !== null && (
