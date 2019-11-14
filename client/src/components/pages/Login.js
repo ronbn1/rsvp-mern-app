@@ -29,7 +29,6 @@ const Login = props => {
       <h1>Login</h1>
       <form action="" onSubmit={submit}>
         <input
-          autoComplete="username"
           type="email"
           name="email"
           placeholder="Email"
@@ -37,7 +36,6 @@ const Login = props => {
           onChange={handleChange}
         />
         <input
-          autoComplete="current-password"
           type="password"
           name="password"
           placeholder="Password"
